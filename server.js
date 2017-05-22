@@ -21,9 +21,11 @@ app.use(express.static(path.join(__dirname, 'client')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+
+// set routes
 app.use('/', index);
 app.use('/api', tasks);
 
 app.listen(port, function(){
-    console.log('Server started on port'+port);
+    console.log('Server started on port '+port);
 });
